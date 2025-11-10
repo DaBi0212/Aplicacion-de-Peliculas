@@ -1,0 +1,37 @@
+.backdrop-container {
+  padding: 0 10px;
+}
+
+.backdrop-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.backdrop-item {
+  flex: 0 0 auto;
+  width: 77%;
+}
+
+// CORRECCIÓN: Las imágenes llenan completamente el contenedor
+ion-card {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    // Asegura que la imagen cubra todo el espacio
+    border-radius: 8px;
+    display: block;       // Elimina espacios en blanco
+  }
+}

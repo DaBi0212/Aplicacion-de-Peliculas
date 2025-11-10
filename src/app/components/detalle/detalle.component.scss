@@ -1,0 +1,80 @@
+.poster-detalle-sobre {
+    position: relative;
+    top: -75px;
+    left: -10px;
+    margin-bottom: -75px;
+}
+
+.titulo {
+    width: 100%;
+    position: absolute;
+    color: white;
+    background-color: red;
+    padding: 5px 5px 40px 5px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.titulo h1{
+    position: absolute;
+    top: 28px;
+    left: 5px;
+}
+
+// ESTILOS PARA ACTORES CON IMÁGENES CUADRADAS
+.actors-scroll-container {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.actors-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+
+  // Ocultar scrollbar pero mantener funcionalidad
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.actor-card-wrapper {
+  flex: 0 0 auto;
+  width: 110px; // Para aproximadamente 3.3 elementos visibles
+}
+
+.card-actor {
+  height: 210px;
+  margin: 0;
+  text-align: center;
+
+  img {
+    width: 100px;          // Mismo ancho
+    height: 180x;         // Misma altura = cuadrado
+    border-radius: 8px;    // Bordes ligeramente redondeados o 0 para completamente cuadrados
+    object-fit: cover;     // Mantiene la proporción de la imagen
+    display: block;
+    margin: 0 auto;
+
+    // Para bordes completamente rectos (opcional):
+    // border-radius: 0;
+  }
+}
+
+.actor-name {
+  position: relative;
+  top: 15px;
+  font-size: 12px;
+  line-height: 1.2;
+  display: block;
+  padding: 0 5px;
+}
+

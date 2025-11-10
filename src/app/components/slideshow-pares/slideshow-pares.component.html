@@ -1,0 +1,25 @@
+<div class="pares-container">
+  <div class="pares-scroll">
+    <!-- Películas en pares -->
+    <div class="par-item" *ngFor="let pares of peliculas | pares">
+      <div class="par-grid">
+        <ion-card mode="md"
+                  class="pelicula-card"
+                  *ngFor="let pelicula of pares"
+                  (click)="verDetalle(pelicula.id)">
+          <img class="poster"
+               [src]="pelicula.poster_path | imagen">
+        </ion-card>
+      </div>
+    </div>
+
+    <!-- Botón "+" más pequeño y cuadrado -->
+    <div class="btn-mas-container">
+      <ion-button class="btn-mas-cuadrado"
+                  size="small"
+                  (click)="onClick()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</div>

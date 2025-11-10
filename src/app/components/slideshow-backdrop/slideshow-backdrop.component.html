@@ -1,0 +1,9 @@
+<div class="backdrop-container">
+  <div class="backdrop-scroll">
+    <div class="backdrop-item" *ngFor="let pelicula of peliculas | filtroImagen">
+      <ion-card (click)="verDetalle( pelicula.id )">
+        <img [src]="pelicula.backdrop_path | imagen">
+      </ion-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>Favoritos</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Estado vacío -->
+  <div *ngIf="favoritoGenero.length === 0" class="empty-state">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-icon name="film-outline" size="large"></ion-icon>
+          <h4>No hay películas favoritas</h4>
+          <p>Agrega películas a favoritos desde el detalle de cada película</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Lista de favoritos por género -->
+  <div *ngFor="let grupo of favoritoGenero">
+
+    <ion-grid *ngIf="grupo.pelis.length > 0">
+      <ion-row>
+        <ion-col>
+          <h4>{{ grupo.genero }}</h4>
+        </ion-col>
+      </ion-row>
+
+      <app-slideshow-poster [peliculas]="grupo.pelis"></app-slideshow-poster>
+
+    </ion-grid>
+
+  </div>
+
+</ion-content>

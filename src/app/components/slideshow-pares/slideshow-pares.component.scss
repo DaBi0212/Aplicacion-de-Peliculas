@@ -1,0 +1,70 @@
+.pares-container {
+  padding: 0 10px;
+}
+
+.pares-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  padding: 10px 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.par-item {
+  flex: 0 0 auto;
+  // CAMBIO: Usar ancho fijo para mantener consistencia
+  width: 110px; // Mismo ancho que en posters
+}
+
+.par-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px;
+  // CAMBIO: Altura total basada en 2 posters
+  height: 340px; // (165px * 2) + 25px de gap
+}
+
+// CORRECCIÓN: Ajustar el card al tamaño de la imagen
+.pelicula-card {
+  margin: 0;
+  width: 100%;
+  height: 100%; // Ocupa todo el espacio del grid item
+  padding: 0; // Eliminar padding interno
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+}
+
+.btn-mas-container {
+  flex: 0 0 auto;
+  // CAMBIO: Mismo ancho que los items de películas
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-mas-cuadrado {
+  --border-radius: 8px;
+  // CAMBIO: Mismo tamaño que los posters
+  width: 70px;
+  height: 60px; // Misma altura que un poster
+  margin: 0;
+
+  ion-icon {
+    font-size: 40px;
+    width: 40px;
+    height: 20;
+  }
+}

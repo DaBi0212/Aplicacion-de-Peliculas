@@ -1,0 +1,10 @@
+<div class="posters-scroll-container">
+  <div class="posters-scroll">
+    <div class="poster-item" *ngFor="let pelicula of peliculas">
+      <ion-card mode="md" (click)="verDetalle( pelicula.id.toString() )">
+        <img class="poster"
+             [src]="pelicula.poster_path | imagen">
+      </ion-card>
+    </div>
+  </div>
+</div>
